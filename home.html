@@ -1,10 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolle Mina Breda</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        @font-face {
+            font-family: 'Adlery Pro Blockletter';
+            src: url('../fonts/Adlery-Pro-Blockletter-trial.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #D2C0DF;
+            font-family: 'Adlery Pro Blockletter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 4rem;
+            color: #000000;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .main-text {
+            font-size: 2.5rem;
+            color: #000000;
+            margin-bottom: 2rem;
+            text-transform: lowercase;
+            letter-spacing: 2px;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cover-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .instagram-link {
+            display: inline-block;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .instagram-link:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .instagram-logo {
+            width: 60px;
+            height: 60px;
+            color: #000000;
+        }
+
+        /* Call-to-action */
+        .cta {
+            max-width: 800px;
+            margin: 2rem auto 0;
+            text-align: center;
+        }
+
+        .cta p {
+            font-size: 1.25rem;
+            color: #000000;
+            margin: 0.75rem 0;
+        }
+
+        .cta a {
+            color: #005cc3;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.6rem 1rem;
+            background-color: #005cc3;
+            color: #ffffff !important;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-1px);
+            opacity: 0.92;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .main-text {
+                font-size: 1.75rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .instagram-logo {
+                width: 50px;
+                height: 50px;
+            }
+            .cta p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 1.75rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .main-text {
+                font-size: 1.25rem;
+                margin-bottom: 1rem;
+            }
+
+            .instagram-logo {
+                width: 40px;
+                height: 40px;
+            }
+            .cta p {
+                font-size: 1rem;
+            }
+        }
+
+    </style>
 </head>
 <body>
-$END$
-</body>
+<div class="container">
+    <h1 class="title">Dolle Mina Breda</h1>
+    <h2 class="main-text">hier wordt aan de weg geschilderd</h2>
+    <div class="image-placeholder">
+        <img src="/static/images/Vlag%20Dolle%20Mina%20Breda.jpg" alt="Vlag Dolle Mina Zwolle" class="cover-image">
+    </div>
+    <div class="cta">
+        <p>
+            Meld je aan bij Dolle Mina:
+        </p>
+        <a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSe-JFoZnistZRhRgqfAlea-YF0DbfgPD4a21YuMYiZswtgtBA/viewform?pli=1"
+           target="_blank" rel="noopener noreferrer" aria-label="Meld je aan via het formulier">Aanmelden</a>
+        <p class="cta-contact">
+            Vragen of samenwerken?<br /> Mail: <br />
+            <a href="/cdn-cgi/l/email-protection#0b6f6467676e6662656a717c6467676e4b7b79647f646525666e"><span class="__cf_email__" data-cfemail="a1c5cecdcdc4ccc8cfc0dbd6cecdcdc4e1d1d3ced5cecf8fccc4">[email&#160;protected]</span></a>
+        </p>
+    </div>
+    <div class="social-links">
+        <a href="https://www.instagram.com/dolleminabreda/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+            <svg class="instagram-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path/>
+            </svg>
+        </a>
+    </div>
+</div>
+<script></script></body>
 </html>
