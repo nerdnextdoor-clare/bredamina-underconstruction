@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <style>
         @font-face {
-            font-family: 'Adlery Pro Blockletter';
-            src: url('./fonts/adlery-pro.blockletter.ttf') format('truetype');
+            font-family: 'at risk youth';
+            src: url('./fonts/at-risk-youth.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Grindy Brush';
+            src: url('./fonts/grindy-brush.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
@@ -20,13 +27,14 @@
         }
 
         body {
-            background-color: #fa0000;
-            font-family: 'Adlery Pro Blockletter', sans-serif;
+            background: linear-gradient(#f10f0f 0%, #f0000030 100%);
+            font-family: 'at risk youth', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 70px;
+            color: #2b0000;
         }
 
         .container {
@@ -35,18 +43,31 @@
             text-align: center;
         }
 
+        .sub-title {
+            font-family: 'Grindy Brush', sans-serif;
+            font-size: 2rem;
+            color: #2b0000ba;
+            margin-bottom: 0rem;
+            text-transform: uppercase;
+            letter-spacing: 0px;
+            font-weight: normal;
+        }
+
         .title {
-            font-size: 4rem;
-            color: #000000;
+            font-family: 'Grindy Brush', sans-serif;
+            font-size: 6rem;
+                color: #2b0000;
             margin-bottom: 1rem;
             text-transform: uppercase;
             letter-spacing: 3px;
+            font-weight: bold;
         }
 
         .main-text {
+            font-family: 'at risk youth', sans-serif;
             font-size: 2.5rem;
-            color: #000000;
-            margin-bottom: 2rem;
+            color: #510000b8;
+            margin-top: 5rem;
             text-transform: lowercase;
             letter-spacing: 2px;
         }
@@ -60,10 +81,34 @@
             justify-content: center;
         }
 
+        .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centers the entire group */
+            gap: 20px;
+            margin: 3rem;
+        }
+
+        .title-container h1 {
+            text-align: center;
+
+        }
+
+        .title-container img {
+            width: 50%;
+            height: auto;
+            display: block;
+            max-width: 300px;
+            max-height: 200px;
+            object-fit: contain;
+            filter: brightness(0) saturate(100%);
+        }
+
         .cover-image {
             width: 50%;
             height: auto;
             display: block;
+            filter: brightness(1.4) saturate(100%);
         }
 
         .social-links {
@@ -86,7 +131,7 @@
         .instagram-logo {
             width: 60px;
             height: 60px;
-            color: #000000;
+            color: #2b0000;
         }
 
         /* Call-to-action */
@@ -98,12 +143,16 @@
 
         .cta p {
             font-size: 1.75rem;
-            color: #000000;
-            margin: 0.75rem 0;
+            color: #5e01018a;
+            margin: 0.5rem 0;
         }
 
         .cta a {
             color: #005cc3;
+        }
+
+        .cta-contact {
+            margin: 1rem;
         }
 
         .cta-button {
@@ -167,11 +216,16 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="title">Dolle Mina Breda</h1>
-    <h2 class="main-text">binnenkort meer</h2>
-    <div class="image-placeholder">
-        <img src="/images/Dolle-Mina-Feninisme-logo.png" alt="Dolle Mina icon" class="cover-image">
+    <h1 class="sub-title">De Dolle Minas zijn terug in </h1>
+    <div class="title-container">
+        <h1 class="title">Breda </h1>
+        <img src="/images/Breda flag alpha dark red.png" alt="Breda flag alpha red">
     </div>
+
+    <div class="image-placeholder">
+        <img src="/images/Dolle-Mina-Feninisme-logo-dark-red.png" alt="Dolle Mina icon" class="cover-image">
+    </div>
+    <h2 class="main-text">binnenkort meer van de Bredaminas</h2>
     <div class="cta">
         <p>
             Meld je aan bij Dolle Mina:
@@ -179,23 +233,27 @@
         <a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSe-JFoZnistZRhRgqfAlea-YF0DbfgPD4a21YuMYiZswtgtBA/viewform?pli=1"
            target="_blank" rel="noopener noreferrer" aria-label="Meld je aan via het formulier">Aanmelden</a>
         <p class="cta-contact">
-            Vragen of samenwerken?<br /> Mail: <br />
-            <script>
-                var eDone = 'info'+'@'+'bredamina'+'.'+'nl';
-                var eSubject = 'Vragen (via website)';
-                var eSubject = '';  // optional
-
-                document.write('<a '+'hre'+'f="mai'+'lto:'+eDone+'?sub'+'ject='+eSubject+'">'+eDone+'</'+'a>');
-            </script>
+            Vragen of samenwerken?<br /> Mail ons: <br />
+            <p id="mailbox"></p>
         </p>
     </div>
     <div class="social-links">
         <a href="https://www.instagram.com/dolleminabreda/" target="_blank" rel="noopener noreferrer" class="instagram-link">
             <svg class="instagram-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path/>
+                <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
             </svg>
         </a>
     </div>
 </div>
-<script></script></body>
+<script>
+
+    var eDone = 'info'+'@'+'bredamina'+'.'+'nl';
+    var eSubject = 'Vragen (via website)';
+
+    var mailbox = document.getElementById("mailbox");
+    mailbox.innerHTML = ('<a '+'hre'+'f="mai'+'lto:'+eDone+'?sub'+'ject='+eSubject+'">'+eDone+'</'+'a>');
+
+
+</script>
+</body>
 </html>
